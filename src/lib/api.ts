@@ -99,6 +99,32 @@ export type TopPagesResponse = {
   rows: Ga4PageRow[];
 };
 
+export type MetaSummary = {
+  success: true;
+  property: string;
+  data: {
+    total_spend: number;
+    total_impressions: number;
+    total_clicks: number;
+    avg_ctr: number;
+    avg_cpc: number;
+  };
+};
+
+export type MetaCampaignRow = {
+  campaign_name: string;
+  spend: number;
+  impressions: number;
+  clicks: number;
+  ctr: number;
+};
+
+export type TopCampaignsResponse = {
+  success: true;
+  property: string;
+  rows: MetaCampaignRow[];
+};
+
 export const getProperties = () =>
   apiFetch<PropertiesResponse>("/properties");
 
@@ -113,3 +139,9 @@ export const getGa4Summary = (property: string) =>
 
 export const getTopPages = (property: string) =>
   apiFetch<TopPagesResponse>("/ga4/top-pages", { property });
+
+export const getMetaSummary = (property: string) =>
+  apiFetch<MetaSummary>("/meta/summary", { property });
+
+export const getTopCampaigns = (property: string) =>
+  apiFetch<TopCampaignsResponse>("/meta/top-campaigns", { property });

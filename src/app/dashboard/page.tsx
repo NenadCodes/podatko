@@ -6,6 +6,7 @@ import { getProperties } from "@/lib/api";
 import { Header } from "@/components/Header";
 import { SearchConsoleSection } from "@/components/SearchConsoleSection";
 import { Ga4Section } from "@/components/Ga4Section";
+import { MetaSection } from "@/components/MetaSection";
 import { ErrorBlock, EmptyBlock } from "@/components/StateBlock";
 import { Spinner } from "@/components/Spinner";
 
@@ -55,6 +56,7 @@ export default function DashboardPage() {
       <main className="flex flex-1 flex-col gap-8 px-6 py-6">
         <SearchConsoleSection property={selected} />
         <Ga4Section property={selected} />
+        <MetaSection property={selected} />
       </main>
     </div>
   );

@@ -9,3 +9,10 @@ export function formatPercent(n: number) {
 export function formatPosition(n: number) {
   return n.toFixed(1);
 }
+
+export function formatCurrency(n: number) {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "EUR",
+  }).format(n);
+}
