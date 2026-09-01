@@ -21,7 +21,7 @@ export function Header({
     <header className="flex flex-wrap items-center justify-between gap-3 border-b border-border bg-surface px-6 py-4">
       <div className="flex items-center gap-3">
         <span className="text-base font-semibold text-foreground">
-          Marketing Analytics
+          Podatko
         </span>
         <span className="rounded-full bg-brand/10 px-2 py-0.5 text-xs font-medium capitalize text-brand">
           {role}

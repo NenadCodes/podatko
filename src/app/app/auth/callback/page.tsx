@@ -22,7 +22,7 @@ function AuthCallbackContent() {
 
   useEffect(() => {
     if (!errorDescription && !loading && session) {
-      router.replace("/dashboard");
+      router.replace("/app/dashboard");
     }
   }, [errorDescription, loading, session, router]);
 
@@ -31,7 +31,7 @@ function AuthCallbackContent() {
       <div className="flex min-h-screen flex-1 flex-col items-center justify-center gap-4 px-4 text-center">
         <p className="text-sm text-danger">{errorDescription}</p>
         <Link
-          href="/"
+          href="/app"
           className="text-sm font-medium text-brand hover:underline"
         >
           Back to sign in

@@ -47,7 +47,7 @@ export function LoginScreen() {
       <div className="w-full max-w-sm rounded-xl border border-border bg-surface p-8 shadow-sm">
         <div className="mb-6 text-center">
           <h1 className="text-xl font-semibold text-foreground">
-            Marketing Analytics
+            Podatko
           </h1>
           <p className="mt-1 text-sm text-muted">
             Sign in to view your dashboard

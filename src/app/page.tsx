@@ -1,24 +1,23 @@
-"use client";
+import { MarketingHeader } from "@/components/marketing/MarketingHeader";
+import { Hero } from "@/components/marketing/Hero";
+import { Services } from "@/components/marketing/Services";
+import { PlatformShowcase } from "@/components/marketing/PlatformShowcase";
+import { About } from "@/components/marketing/About";
+import { Contact } from "@/components/marketing/Contact";
+import { MarketingFooter } from "@/components/marketing/MarketingFooter";
 
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
-import { useAuth } from "@/lib/auth-context";
-import { LoginScreen } from "@/components/LoginScreen";
-import { Spinner } from "@/components/Spinner";
-
-export default function Home() {
-  const { session, loading } = useAuth();
-  const router = useRouter();
-
-  useEffect(() => {
-    if (!loading && session) {
-      router.replace("/dashboard");
-    }
-  }, [loading, session, router]);
-
-  if (loading || session) {
-    return <Spinner />;
-  }
-
-  return <LoginScreen />;
+export default function MarketingHome() {
+  return (
+    <div className="flex flex-1 flex-col">
+      <MarketingHeader />
+      <main className="flex flex-1 flex-col">
+        <Hero />
+        <Services />
+        <PlatformShowcase />
+        <About />
+        <Contact />
+      </main>
+      <MarketingFooter />
+    </div>
+  );
 }

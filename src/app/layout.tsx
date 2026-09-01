@@ -14,14 +14,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Marketing Analytics",
-  description: "Marketing analytics dashboard",
+  title: "Marković Marketing | Podatko",
+  description:
+    "Marković Marketing — digitalni marketing i Podatko platforma za praćenje Google Ads, Google Analytics, Search Console i Meta Ads podataka na jednom mestu.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
+      lang="sr"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
